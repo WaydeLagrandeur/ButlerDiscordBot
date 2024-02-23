@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("roll")
-    .setDescription("[description]")
+    .setDescription("Rolls dice!")
     .addIntegerOption((option) =>
       option
         .setName("quantity")
