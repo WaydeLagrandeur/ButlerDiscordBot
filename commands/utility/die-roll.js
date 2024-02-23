@@ -38,8 +38,13 @@ module.exports = {
         diceBreakdown = diceBreakdown + rdm + " + ";
       }
     }
-    await interaction.reply(
-      `Rolling ${quantity}D${dieType}\n${diceBreakdown} = ${total}`
-    );
+
+    if (quantity === 1) {
+      await interaction.reply(`Rolling ${quantity}D${dieType}\n${total}`);
+    } else {
+      await interaction.reply(
+        `Rolling ${quantity}D${dieType}\n${diceBreakdown} = ${total}`
+      );
+    }
   },
 };
